@@ -35,7 +35,7 @@ namespace Graphr.Neo4j.Driver
                         .WithConnectionTimeout(TimeSpan.FromMilliseconds(settings.ConnectionTimeoutMs!.Value))
                         .WithSocketKeepAliveEnabled(settings.SocketKeepAlive)
                         .WithConnectionIdleTimeout(TimeSpan.FromMilliseconds(settings.ConnectionIdleTimeoutMs!.Value))
-                        .WithConnectionLivenessThreshold(TimeSpan.FromMilliseconds(settings.ConnectionLivenessThresholdMs!.Value))
+                        .WithConnectionLivenessCheckTimeout(TimeSpan.FromMilliseconds(settings.ConnectionLivenessThresholdMs!.Value))
                         .WithMaxConnectionLifetime(TimeSpan.FromMilliseconds(settings.MaxConnectionLifetimeMs!.Value))
                         .WithIpv6Enabled(settings.Ipv6Enabled)
                         .WithDefaultReadBufferSize(settings.DefaultReadBufferSize)
