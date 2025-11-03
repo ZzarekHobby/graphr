@@ -12,6 +12,7 @@ namespace Graphr.Neo4j.Configuration
         public bool IsDebugLoggingEnabled { get; set; }
         public bool IsTraceLoggingEnabled { get; set; }
         public new string? EncryptionLevel { get; set; }
+        public long? ConnectionLivenessThresholdMs { get; set; }
         public int? QueryTimeoutInMs { get; set; } = 250;
         public int? MaxTransactionRetryTimeMs { get; set; } = 30_000;
         public int? ConnectionAcquisitionTimeoutMs { get; set; } = 100_000;
