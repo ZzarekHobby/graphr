@@ -44,7 +44,7 @@ namespace Graphr.Neo4j.Driver
                         .WithMaxWriteBufferSize(settings.MaxWriteBufferSize)
                         .WithFetchSize(settings.FetchSize);
 
-                    if (settings.MaxConnectionLifetimeMs != null && settings.MaxConnectionLifetimeMs >= 0)
+                    if (settings.ConnectionLivenessThresholdMs != null && settings.ConnectionLivenessThresholdMs >= 0)
                         builder.WithConnectionLivenessCheckTimeout(TimeSpan.FromMilliseconds(settings.ConnectionLivenessThresholdMs!.Value));
 
                 });
